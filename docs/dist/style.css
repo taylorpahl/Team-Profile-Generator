@@ -15,7 +15,7 @@ header {
 
 .card {
     margin: 2vw;
-    min-width: 20vw;
+    min-width: 250px;
 }
 
 .card-body {
