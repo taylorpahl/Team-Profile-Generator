@@ -1,39 +1,23 @@
-const inquirer = require('inquirer');
-const Engineer = require('./Engineer');
-const Intern = require('./Intern');
-const Manager = require('./Manager');
 
 class Employee {
+    constructor(name, id, email) {
+        this.name = name;
+        this.id = id;
+        this.email = email;
+    }
+
     getName() {
-        inquirer
-            .prompt([
-                {
-                    type: 'input',
-                    name: 'name',
-                    message: 'What is your name?'
-                }
-            ])
+        return this.name;
     }
+
     getId() {
-        inquirer
-            .prompt([
-                {
-                    type: 'input',
-                    name: 'ID',
-                    message: 'What is your epmloyee ID?'
-                }
-            ])
+        return this.id;
     }
+
     getEmail() {
-        inquirer
-            .prompt([
-                {
-                    type: 'input',
-                    name: 'email',
-                    message: 'What is your email address?'
-                }
-            ])
+        return this.email;
     }
+
     getRole() {
         return 'Employee';
     }

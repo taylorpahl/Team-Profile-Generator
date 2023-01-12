@@ -1,15 +1,15 @@
+const Employee = require("./Employee");
 
-class Engineer {
-    getGithub() {
-        inquirer
-            .prompt([
-                {
-                    type: 'input',
-                    name: 'github',
-                    message: 'What is your Github username?'
-                }
-            ])
+class Engineer extends Employee {
+    constructor(name, id, email, github) {
+        super(name, id, email);
+        this.github = github;
     }
+
+    getGithub() {
+        return this.github;
+    }
+
     getRole() {
         return 'Engineer';
     }
